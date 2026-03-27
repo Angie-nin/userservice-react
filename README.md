@@ -1,16 +1,68 @@
-# React + Vite
+# UserService React App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Beskrivning
 
-Currently, two official plugins are available:
+Detta projekt är en frontend-applikation byggd med React (Vite). Applikationen fungerar som en Single Page Application (SPA) och hämtar data från ett separat API (UserService).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Syftet är att visa och hantera användardata på ett tydligt och användarvänligt sätt.
 
-## React Compiler
+## Funktionalitet
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Hämtar användare från API (`GET /api/Users`)
+* Visar användare i ett responsivt grid
+* Sökfunktion (filtrerar på namn, email och roll)
+* Visar antal användare
+* Loading-indikator vid hämtning av data
+* Visuell markering av användarroll (Admin/User)
 
-## Expanding the ESLint configuration
+## Teknologier
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* React
+* Vite
+* JavaScript
+* CSS
+
+## Hur man kör applikationen
+
+### 1. Starta API (UserService)
+
+* Öppna UserService i Visual Studio
+* Starta projektet (https)
+* API:t körs på:
+  https://localhost:7055
+
+### 2. Starta React-applikationen
+
+Öppna terminal i projektmappen:
+
+```
+cd userservice-react
+npm install
+npm run dev
+```
+
+Öppna sedan i webbläsaren:
+http://localhost:5173
+
+## Viktigt att veta
+
+* API:t måste vara igång för att frontend ska fungera
+* Databasen skapas automatiskt vid första uppstart
+* Testanvändare seedas automatiskt (5 st)
+* Gemensamt lösenord för testanvändare: `Test123!`
+
+## AI-användning
+
+AI har använts som stöd för:
+
+* Strukturering av React-komponenter
+* Felsökning (CORS, npm, setup)
+* Förbättring av UI/UX
+* Kodförslag och refaktorering
+* Hjälp med struktur i ReadMe
+
+All AI-genererad kod har granskats och anpassats efter projektets behov.
+
+## Reflektion
+
+Projektet demonstrerar integration mellan frontend (React) och backend (ASP.NET Core API). Fokus har legat på tydlig struktur, användarvänlighet och fungerande kommunikation mellan systemen.
